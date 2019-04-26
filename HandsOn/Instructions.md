@@ -3,7 +3,8 @@ We will use Machine Learning Studio and available data to determine if you would
 ## Create an experiment in Machine Learning Studio
 Open [https://studio.azureml.net/](https://studio.azureml.net) and sign in (or up if you have not previously).
 ![Microsoft Azure Machine Learning Studio](./images/MLStudio-Website.png)
-After signing in, you will see the workspace and myight be greated with an offer to take a tour of Azure ML.
+
+After signing in, you will see the workspace and might be greated with an offer to take a tour of Azure ML.
 ![Machine Learning Studio](./images/MLStudio-Overview.png)
 
 ## Add test data
@@ -24,10 +25,12 @@ Click on **+New** and create a new dataset from a local file (*train.csv*).
 
 In machine learning the input is called a **feature** whereas the output (what we want to predict) would be a **label**.
 
-Categorical data are columns that are not treated as their actual data type. A zip code is an example, as it is part of the adress and you will most likely not want to calculate with it.
+Categorical data are columns that are not treated as their actual data type. A zip code is an example, as it is part of the adress and you will most likely - even if it is a number - not want to calculate with it.
 
 ## Prepare the data
-Cleaning the data before passing it to the machine learning algorithm will enable us to use it for machine learning at all.
+Cleaning the data before passing it to the machine learning algorithm will enable us to use it for machine learning at all. Drag the needed action bubbles from the left to the workspace. You can search or find them directly.
+
+Oh, and don't forget to connect the bubbles :wink:
 
 * Use "Select Columns in Dataset" to remove *name*, *sibsp*, *parch*, *ticket*, *cabin*, *embarked*
 * Use "Edit Metadata" and change the columns *survived*, *pclass*, *sex* to **Make categorical**, as we do not intend to calculate with them
@@ -51,6 +54,8 @@ Add "Evaluate Model" and connect it to the previously added "Score Model" action
 ![Experiment Overview](./images/Experiment-Finished.png)
 
 Now "Save" and "Run" again and look at the output of the last step to see how the models behave.
+
+*Hint: Scroll down while looking at the "Visualize" page. There is more then just a graph*
 
 ## Deploy the model
 From the two models select the one that performed better and deploy a "Predictive Web Service".
