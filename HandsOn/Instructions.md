@@ -8,7 +8,7 @@ After signing in, you will see the workspace and might be greated with an offer 
 ![Machine Learning Studio](./images/MLStudio-Overview.png)
 
 ## Add test data
-Data for training and testing the model can be downloaded from [kaggle](https://www.kaggle.com/c/titanic/overview). If you do not want to register on that site, you can download the two files directly from [GitHub](https://github.com/pcsanwald/kaggle-titanic). *test.csv* and *train.csv* will be used to train the model and later test it to validate the machine learning algorithm.
+Data for training and testing the model can be downloaded from [kaggle](https://www.kaggle.com/c/titanic/overview). If you do not want to register on that site, you can download the two files directly from [GitHub](https://github.com/pcsanwald/kaggle-titanic)<sup>1</sup>. *test.csv* and *train.csv* will be used to train the model and later test it to validate the machine learning algorithm.
 
 Click on **+New** and create a new dataset from a local file (*train.csv*).
 ![Uploading training data](./images/UploadingTrainingData.PNG)
@@ -30,7 +30,7 @@ Categorical data are columns that are not treated as their actual data type. A z
 ## Prepare the data
 Cleaning the data before passing it to the machine learning algorithm will enable us to use it for machine learning at all. Drag the needed action bubbles from the left to the workspace. You can search or find them directly.
 
-Oh, and don't forget to connect the bubbles :wink:
+Oh, and don't forget to connect the bubbles and take your time to see all options of the dialogs :wink:
 
 * Use "Select Columns in Dataset" to remove *name*, *sibsp*, *parch*, *ticket*, *cabin*, *embarked*
 * Use "Edit Metadata" and change the columns *survived*, *pclass*, *sex* to **Make categorical**, as we do not intend to calculate with them
@@ -53,9 +53,7 @@ Create two "Score Model" actions and configure their inputs to one model each an
 Add "Evaluate Model" and connect it to the previously added "Score Model" actions.
 ![Experiment Overview](./images/Experiment-Finished.png)
 
-Now "Save" and "Run" again and look at the output of the last step to see how the models behave.
-
-*Hint: Scroll down while looking at the "Visualize" page. There is more then just a graph*
+Now "Save" and "Run" again and look at the output of the last step to see how the models behave<sup>2</sup>.
 
 ## Deploy the model
 From the two models select the one that performed better and deploy a "Predictive Web Service".
@@ -92,3 +90,8 @@ The test result will be available at the bottom.
 * [Using Azure Machine Learning to Predict Who Will Survive the Titanic - Part 2](https://channel9.msdn.com/Blogs/raw-tech/Using-Azure-Machine-Learning-to-Predict-Who-Will-Survive-the-Titanic-Part-2)
 ## Misc
 * [Microsoft Azure Machine Learning Cheat Sheet](aka.ms/AzureMachineLearningCheatSheet)
+
+## Footnotes
+1. Make sure you downloaded the csv files and not the HTML file that shows the csvs. Click on the files, then switch to RAW and download the page as *.csv]
+
+2. Scroll down while looking at the "Visualize" page. There is more then just a graph
